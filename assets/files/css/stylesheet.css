@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+body {
+    background: url('../../images/homebg.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+a, a:hover, a:active, a:focus {
+    text-decoration: none;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.button {
+    height: 45px;
+    padding: 0px 40px;
+    font-size: 17px;
+    outline: none;
+    border: 0px;
+    border-radius: 12px;
+    background: #38a3ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/**************************************************
+MAIN STYLES
+**************************************************/
+.container {
+    width: fit-content;
+    height: auto;
+    margin: 0 auto;
+    border: 2px solid #eceef3;
+    border-bottom: 3px solid #dbdbe1;
+    border-radius: 20px;
+}
+
+.navigation {
+    width: 120px;
+    background: #fff;
+    padding: 10px 15px 10px 10px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/********* NAVIGATION  *********/
+nav .nav {
+    list-style: none;
+    padding: 0px;
+    text-align: center;
+}
+
+nav .separator {
+    width: 80px;
+    font-size: 15px;
+    font-family: "DM Sans", sans-serif;
+    color: grey;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #9f9f9f;
+    margin-left: 10px;
+}
+
+nav .nav-item {
+    width: 87px;
+    height: 120px;
+    border: 2px solid #f2f2f2;
+    border-radius: 20px;
+    margin: 17.5px 5px;
+    position: relative;
+}
+
+nav .nav-item.home use {
+    color: #38a3ff;
+}
+
+nav .nav-item.student use {
+    color: #3bb55b;
+}
+
+nav .nav-item.teacher use {
+    color: #eb61d0;
+}
+
+nav .nav-item.admin use {
+    color: #f56c22;
+}
+
+nav .nav-item.active {
+    background: #38a3ff;
+    border-color: #38a3ff;
+}
+
+nav .nav-item.active:before {
+    content: "";
+    display: block;
+    height: 20px;
+    position: absolute;
+    width: 17px;
+    left: 100%;
+    background: url("../../fonts/svg/pointer.svg");
+    background-position: -15% 0%;
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav .nav-item.active circle {
+    fill: #69baff;
+}
+
+nav .nav-item.active use {
+    color: #fff;
+}
+
+nav .nav-item .icon {
+    margin-bottom: 5px;
+}
+
+nav .nav-item a {
+    display: block;
+    padding: 27px 0px;
+    color: #6e6e6e;
+    font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+nav .nav-item.active a {
+    color: #fff;
+}
+
+/****** Effects ******/
+nav .nav-item, nav .nav-item a, nav .nav-item use, nav .nav-item circle {
+    transition: .2s;
+}
+
+.nav-item:hover {
+    background: rgb(56 163 255 / 85%);
+}
+
+.nav-item:hover a {
+    color: #fff;
+}
+
+.nav-item:hover circle {
+    fill: #3492e9;
+}
+
+.nav-item:hover use {
+    color: #fff !important;
+}
+
+.nav-item:hover:active {
+    width: 81px;
+    margin: 17.5px 8px;
+}
+
+/****** LOGIN FORM *******/
+.login {
+    min-width: 350px;
+    max-height: 400px;
+    background: #fff;
+    padding: 30px;
+    margin-top: 485px;
+    transform: translate(-22.5%, -50%);
+}
+
+.field {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.field:nth-of-type(2) {
+    margin-bottom: 25px;
+}
+
+.field.commons {
+    width: 300px;
+    height: 52px;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 5px;
+    background: #f9fafc;
+    border: 2px solid #edeef1;
+    border-radius: 5px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.field.title h2 {
+    font-size: 32px;
+    font-family: "DM Sans", sans-serif;
+    color: #363636;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.commons input, .commons label {
+    font-family: "DM Sans", sans-serif;
+}
+
+.commons input {
+    height: 32px;
+    outline: none;
+    border: 0px;
+    background: transparent;
+    color: #474747;
+    font-size: 18px;
+    text-indent: 4px;
+}
+
+.commons label {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    color: gray;
+    transition: .2s;
+}
+
+.commons input:focus + label, .commons input:valid + label {
+    top: -12px;
+    left: 12px;
+    font-size: 16px;
+    color: #b1b5bd;
+    background: #fff;
+    padding: 0px 5px;
+}
+
+.field.text {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.field input[type=checkbox] {
+    margin: 10px 10px;
+}
